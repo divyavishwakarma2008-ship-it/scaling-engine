@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Doctors' Day Twinkle Didi</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ff9a9e,#fad0c4,#a1c4fd);
+overflow:hidden;
+}
+
+.card{
+width:350px;
+background:white;
+padding:25px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 0 20px rgba(0,0,0,.3);
+animation:zoom 3s infinite alternate;
+z-index:2;
+}
+
+@keyframes zoom{
+from{transform:scale(1);}
+to{transform:scale(1.05);}
+}
+
+h1{
+color:#ff4081;
+animation:glow 2s infinite;
+}
+
+@keyframes glow{
+0%{text-shadow:0 0 5px hotpink;}
+50%{text-shadow:0 0 20px deeppink;}
+100%{text-shadow:0 0 5px hotpink;}
+}
+
+p{
+margin-top:15px;
+font-size:18px;
+color:#444;
+line-height:1.5;
+}
+
+button{
+margin-top:20px;
+padding:12px 20px;
+border:none;
+background:#ff4081;
+color:white;
+font-size:18px;
+border-radius:10px;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+background:#e91e63;
+}
+
+.heart{
+position:absolute;
+font-size:25px;
+animation:float 8s linear infinite;
+opacity:.8;
+}
+
+@keyframes float{
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+100%{
+transform:translateY(-120vh);
+opacity:1;
+}
+}
+</style>
+
+</head>
+<body>
+
+<div class="card">
+<h1>👩‍⚕️ Happy Doctors' Day<br>Twinkle Didi ❤️</h1>
+
+<p>
+Dear <b>Twinkle Didi</b>,<br><br>
+
+Happy Doctors' Day to the most hardworking future doctor. 🩺✨<br><br>
+
+Your dedication, kindness and determination inspire me every day. I know you will become an amazing doctor and make many lives better. 💙<br><br>
+
+I am so proud of you.<br>
+Keep shining and keep smiling. 🌸
+</p>
+
+<button onclick="wish()">Click Me 🎁</button>
+</div>
+
+<script>
+
+function wish(){
+alert("💖 Happy Doctors' Day Twinkle Didi! 💐\n\nYou are my inspiration. I am so proud of you. Love you forever! ❤️");
+}
+
+for(let i=0;i<40;i++){
+
+let heart=document.createElement("div");
+
+heart.innerHTML="💖";
+
+heart.className="heart";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=(Math.random()*5+5)+"s";
+
+heart.style.fontSize=(Math.random()*20+15)+"px";
+
+document.body.appendChild(heart);
+
+}
+
+</script>
+
+</body>
+</html>
